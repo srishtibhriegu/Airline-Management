@@ -44,3 +44,124 @@ body{
 .login{
 padding-right: 100px;
 }
+.txt{
+ text-align:center;
+ font-size:22px;
+ line-height: 28px;
+ font-weight:500px;
+ color: black;
+ margin: 20px, 0px;
+ padding-top: 230px;
+ padding-right: 155px;
+}
+.container{
+     width:1000px;
+     background: rgb(255, 255, 255);
+     box-shadow: 20px;
+     border-radius: 24px;
+     margin:0px auto;
+
+     display: center;
+ }
+ .inner-container{
+ display: flex;
+ }
+.form-check{
+ display: flex;
+ margin-right:8px;
+ cursor: pointer;
+ padding:8px 16px;
+ border-radius:100px;
+ background: rgba(135, 206, 235,0.1);
+ color: black;
+}
+.form-check-input{
+  line-height: normal;
+  font-size: 5px;
+  font-weight: 50px;
+}
+.nested-container{
+  display:flex;
+  margin-top:10px;
+}
+.inn{
+ position: relative;
+ margin-right:-10px;
+ margin-left:20px;
+}
+.pqr{
+ border: 2px solid #D3D3D3;
+ border-radius: 8px;
+ height:30px;
+ position: relative;
+ display: flex;
+ align-item:center;
+ cursor:pointer;
+ padding:15px 15px 15px;
+}
+.pqr:hover {
+    border-color: #666;
+}
+.xyz{
+ line-height:normal;
+ font-size: 15px;
+ display: inline-flex;
+ position: absolute;
+ padding: 0px 5px;
+ left: 14px;
+ top: -10px;
+}
+.bhnHeq{
+  font-size:19px;
+  line-height: normal;
+  margin-top:10px
+}
+.swap{
+  box-shadow: rgba(0,0,0,0.1) 0px,0px,10px;
+    background-radius:12px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-item: center;
+    justify-content:center;
+    cursor:pointer;
+    position: absolute;
+    right: -25px;
+    top: 25px;
+    z-index:1;
+}
+#myDate{
+ border: none;
+}
+.ss{
+  font-size:15px;
+  line-height:10px;
+  height:60px;
+}
+
+#reDate{
+ border:none;
+ display:none;
+}
+
+.search{
+  display:flex;
+  align-item:center;
+  justify-content:center;
+  margin-top:90px;
+  margin-bottom:-100px;
+}
+.searchFlight{
+   display:inline-flex;
+   align-item:center;
+   justify-content:center;
+   background:#87CEEB;
+   border-radius:30px;
+   line-height:normal;
+   font-size:20px;
+   font-weight:500;
+   padding:16px 45px;
+   border:0px;
+   cursor:pointer;
+}
+
