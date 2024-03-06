@@ -1,20 +1,28 @@
-function submitForm(){
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-       if (!username || !password) {
-              alert("Please enter both username and password");
-              return;
-          }
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-         const formData = {
-                username: username,
-                password: password,
-            };
-
-       if (username === "user" && password === "password") {
-               alert("Login successful!");
-           } else {
-               alert("Invalid username or password. Please try again.");
-           }
-}
+    if (!username || !password) {
+        alert('Username and password are required.');
+        return;
+    }
+    fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => {
+        if (response.ok) {
+            window.location.href = '/dashboard';
+        } else {
+            throw new Error('Invalid credentials');
+        }
+    })
+    .catch(error => {
+        alert('Login failed: ' + error.message);
+    });
+});

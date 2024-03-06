@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aeroride</title>
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+<div class="navbar">
+    <div class="logo" >
+        <img src="images/Aeroride.png" alt="Airline logo">
+        <div class="aeroride-text">Aeroride</div>
+    </div>
+    <div class="menu">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="login">
+        <a href="login.html">Login/Signup</a>
+    </div>
+</div>
+<div class="txt">
+    <h3>Book Domestic and International Flights Tickets</h3>
+    <div class="container">
+        <div class="inner-container">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    One-Way
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Round-city
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Multi-City
+                </label>
+            </div>
+        </div>
+        <div class="nested-container">
+            <div class="inn">
+                <div class="pqr">
+                    <span class="xyz">From</span>
+                    <p class="bhnHeq">Enter city or airport</p>
+                </div>
+                <span class="swap">
+            <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.11 6.739a.842.842 0 0 1-.842-.842V4.844a.21.21 0 0 0-.21-.211H4.543a1.264 1.264 0 1 1 0-2.527h8.515a.21.21 0 0 0 .21-.21V.841A.843.843 0 0 1 14.544.12l4.212 2.528a.842.842 0 0 1 0 1.444L14.544 6.62a.843.843 0 0 1-.433.12ZM.409 10.26l4.212-2.527a.842.842 0 0 1 1.276.723v1.053c0 .116.095.21.21.21h8.516a1.264 1.264 0 1 1 0 2.528H6.108a.21.21 0 0 0-.21.21v1.053a.842.842 0 0 1-1.277.722L.409 11.705a.842.842 0 0 1 0-1.445Z" fill="#2276E3"></path></svg>
+       </span>
+            </div>
+
+            <div class="inn">
+                <div class="pqr">
+                    <span class="xyz">To</span>
+                    <p class="bhnHeq">Enter city or airport</p>
+                </div>
+            </div>
+
+            <div class="inn">
+                <div class="pqr">
+                    <span class="xyz">Departure</span>
+                    <input type="date" name="" id="myDate">
+                </div>
+            </div>
+
+            <div class="inn">
+                <div class="pqr">
+                    <span class="xyz">Return</span>
+                    <div class="ss" id="returnText" onclick="toggleReturnCalendar()">
+                        <span>Click to add return flight for better discount</span>
+                        <input type="date" name="" id="reDate">
+                    </div>
+                </div>
+            </div>
+
+            <div class="inn">
+                <div class="pqr">
+                    <span class="xyz">Travelers and class</span>
+                    <p class="bhnHeq">Enter city or airport</p>
+                </div>
+            </div>
+        </div>
+        <div class="lastContainer">
+            <div class="fare">
+                <span class="selectFare">Select A Fare Types:</span>
+            </div>
+
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                <label class="faS" for="flexRadioDefault1">
+                    Regular
+                </label>
+            </div>
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+                <label class="faS" for="flexRadioDefault2">
+                    Student
+                </label>
+            </div>
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                <label class="faS" for="flexRadioDefault1">
+                    Senior Citizen
+                </label>
+            </div>
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" checked>
+                <label class="faS" for="flexRadioDefault2">
+                    Doctor & Nurses
+                </label>
+            </div>
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+                <label class="faS" for="flexRadioDefault1">
+                    Armed Forces
+                </label>
+            </div>
+
+        </div>
+
+        <div class="search" id="searchButton">
+            <span class="searchFlight">SEARCH FLIGHTS</span>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
