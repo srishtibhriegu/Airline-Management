@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+*{
+   margin:0;
+   padding:0;box-sizing:border-box;
+   font-family: 'Montserrat' , sans-serif;
+}
+
 body{
-     padding-top:10px;
-     background-image: url('images/background img.jpg');
-     background-size:cover;
-     background-position: center;
-     background-repeat: no-repeat;
-     margin:0;
-     height: 100vh;
- }
- .navbar{
+  background-color:#87CEEB;
+  background: linear-gradient(to bottom, #87CEEB, #FFFFFF);
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow:hidden;
+}
+.navbar{
     padding-top:20px;
     color: white;
     display: flex;
@@ -25,7 +33,7 @@ body{
        margin-right:10px;
    }
 
-   .aeroride-text{
+   .AeroRide-text{
          color: black;
          font-size:20px;
          margin-right:30px;
@@ -37,138 +45,199 @@ body{
      text-decoration: none;
      margin-right: 10px;
   }
+
   .menu{
   padding-right:700px
   }
- main{
-   flex:1;
-   display:flex;
-   justify-content: flex-start;
-   align-item: center;
-   padding:200px;
+
+.container{
+   background-color: #FFFFFF;
+   border-radius: 30px;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.35);
    position: relative;
-   margin-left:30px;
+   overflow: hidden;
+   width: 768px;
+   max-width: 100%;
+   min-height: 480px;
+   margin: 0 auto;
 }
- p {
-     font-size: 24px;
-     text-align: left;
-     position: absolute;
-     top: 30%;
-     left: 0;
-     transform: translateY(-50%);
-
-}
-
-h2{
-  text-align: centre;
-  padding-top:-20px;
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    margin-left:150px;
-    margin-top:90px;
+container p{
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing:0.3;
+   margin: 20px 0;
 }
 
-.forms {
-    text-align: center;
+.container span{
+    font-size: 12px;
 }
 
-.form.login {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
 }
-
-.form-content {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
-.form-content header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.field {
-    margin-bottom: 20px;
-}
-
-.input,
- .password{
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.eye-icon{
-   position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      cursor: pointer;
-      color: #3498db;
-}
-
-.button-field button {
-    height:100%;
-    width:100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+.container button{
+    background-color:#87CEEB;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration:uppercase;
+    margin-top: 10px;
     cursor: pointer;
-    background-color: #87CEEB;
+}
+.container button.hidden{
+   background-color: transparent;
+   border-color: #fff;
+}
+.container form{
+   background-color: #fff;
+   display: flex;
+   align-item: center;
+   justify-content:center;
+   flex-direction:column;
+   padding: 0 40px;
+   height:100%;
+}
+
+.container input{
+   background-color:#eee;
+   border:none;
+   margin:8px 0;
+   padding: 10px 15px;
+   font-size:13px;
+   width:100%;
+   outline:none;
+}
+
+.form-container{
+    position: absolute;
+    top:0;
+    height:100%;
+    transition:all 0.6s ease in out;
+}
+
+.log-in{
+   left:0;
+   width:50%;
+   z-index:2;
+}
+
+.container.active .log-in{
+   transform: translateX(100%);
+}
+
+.sign-up{
+  left:0;
+  width:50%;
+  opacity:0;
+  z-index:1;
+}
+
+.container.active .sign-up{
+     transform: translateX(100%);
+     opacity:1;
+     z-index:5;
+     animation: move 0.6s;
 }
 
 
-.form-link{
-    text-align: center;
-    margin-bottom: 10px;
-    }
-.form-link span,
-.form-link a{
-    font-size: 14px;
-    font-weight: 400px;
-    color: #232836;
-}
+@keyFrames move{
+  0%, 49.99%{
+    opacity:1;
+    z-index:1
+  }
 
-.form a{
-  color: #0171d3;
-  text-decoration: none;
-}
-.form a:hover{
-  text-decoration:underline;
+  50%, 100%{
+    opacity:1;
+    z-index:5;
+  }
 }
 
 
-
-.where {
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family:Sans-serif;
+.social-account{
+   margin: 20px 0;
 }
 
-.do-you-want-to {
-    font-size: 20px;
-    text-transform: uppercase;
-    font-family:Sans-serif;
+.social-account a{
+  border: 1px solid #ccc;
+  border-radius:20%;
+  display: inline-flex;
+  justify-content:center;
+  align-item: center;
+  padding-top:10px;
+  width:40px;
+  height:20px;
 }
 
-.explore {
-    font-size: 32px;
-    font-weight: bold;
-    font-family:Sans-serif;
+.toggle-container{
+    position:absolute;
+    top:0;
+    left:50%;
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index:1000;
+}
+
+.container.active .toggle-container{
+   transform: translate(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+   background-color:#87CEEB;
+   height:100%;
+   background-image: linear-gradient(to right, #87CEEB, #00BFFF);
+   color: #fff;
+   position: relative;
+   left:-100%;
+   height: 100%;
+   width:200%;
+   transform: translateX(0);
+   transition: all 0.6s ease-in-out;
+
+}
+
+.container.active .toggle{
+   transform: translateX(50%);
+}
+
+.toggle-panel{
+  position: absolute;
+  width:50%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction: column;
+  text-align: center;
+  top:0;
+  transform:translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+  transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
 }
 
 
+.toggle-right{
+    right:0;
+    transform: translateX(0);
+}
 
-
-
-
-
-
-
-
+.container.active .toggle-right{
+     transform: translateX(200%);
+ }

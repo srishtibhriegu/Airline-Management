@@ -17,7 +17,6 @@ public class FlightController {
 
     @GetMapping("/flights")
     public ResponseEntity<List<Flight>> getFlights() {
-        // Retrieve flight data from CSV file
         List<Flight> flights = fetchFlightDataFromCSV();
         return ResponseEntity.ok(flights);
     }
@@ -25,13 +24,10 @@ public class FlightController {
     private List<Flight> fetchFlightDataFromCSV() {
         List<Flight> flights = new ArrayList<>();
         try {
-            // Load CSV file from resources folder
-            ClassPathResource resource = new ClassPathResource("src/resources/data/flight.csv");
+            ClassPathResource resource = new ClassPathResource("data/flight.csv");
             BufferedReader reader = new BufferedReader(new FileReader(resource.getFile()));
             String line;
-            // Skip header line
-            reader.readLine();
-            // Read CSV line by line and parse flight data
+
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts.length == 3) {
@@ -41,7 +37,6 @@ public class FlightController {
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
-            // Handle file read error
         }
         return flights;
     }

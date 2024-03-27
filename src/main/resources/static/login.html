@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login-Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="login.css">
     <script src="login.js" defer></script>
 </head>
@@ -9,7 +12,7 @@
 <div class="navbar">
     <div class="logo" >
         <img src="images/Aeroride.png" alt="Airline logo">
-        <div class="aeroride-text">Aeroride</div>
+        <div class="AeroRide-text">Aeroride</div>
     </div>
     <div class="menu">
         <a href="home.html">Home</a>
@@ -18,38 +21,83 @@
         <a href="contact.html">Contact Us</a>
     </div>
 </div>
-<main>
-    <p>
-        <span class="where">Where</span><br>
-        <span class="do-you-want-to">Do you want to</span><br>
-        <span class="explore">EXPLORE</span>
-    </p>
- <section class ="container forms"  >
-     <div class = "form login">
-         <div class = "form-content">
-             <header>Login</header>
-             <form action ="#">
-                 <div class ="field input-field">
-                     <input type ="email" placeholder="Email" class="input">
-                 </div>
-                 <div class ="field input-field">
-                     <input type ="password" placeholder="Password" class="password">
-                     <i class='bx bx-hide eye-icon'></i>
 
-                 </div>
-                 <div class="form-link">
-                     <a href="#" class="forget-pass">Forget password?</a>
-                 </div>
-                 <div class ="field button-field">
-                     <button>Login</button>
-                 </div>
-                 <div class="form-link">
-                     <span>Don't have an account? <a href="#" class="signup-link"> Signup</a> </span>
-                 </div>
-             </form>
-         </div>
-     </div>
- </section>
-</main>
+   <div class="container" id="container">
+       <div class="form-container sign-up">
+           <form>
+               <h1>Create Account</h1>
+               <div class="social-account">
+                   <a href="https://accounts.google.com" class="icon">
+                       <i class="fa-brands fa-google"></i>
+                   </a>
+                   <a href="https://www.facebook.com" class="icon">
+                       <i class="fa-brands fa-facebook"></i>
+                   </a>
+                   <a href="https://www.instagram.com" class="icon">
+                       <i class="fa-brands fa-instagram"></i>
+                   </a>
+               </div>
+
+               <span>or use you email for registration</span>
+               <label>
+                   <input type="text" placeholder="Name">
+               </label>
+               <label>
+                   <input type="email" placeholder="Email">
+               </label>
+               <label>
+                   <input type="password" placeholder="Password">
+               </label>
+               <label>
+                   <input type="password" placeholder= "Confirm Password">
+               </label>
+               <button type="button" class="sign-up">Sign Up</button>
+
+           </form>
+       </div>
+       <div class="form-container log-in">
+           <form>
+               <h1>Login</h1>
+               <div class="social-account">
+                   <a href="https://accounts.google.com" class="icon">
+                       <i class="fa-brands fa-google"></i>
+                   </a>
+                   <a href="https://www.facebook.com" class="icon">
+                       <i class="fa-brands fa-facebook"></i>
+                   </a>
+                   <a href="https://www.instagram.com" class="icon">
+                       <i class="fa-brands fa-instagram"></i>
+                   </a>
+               </div>
+
+               <span>or use you email for Log In</span>
+               <label>
+                   <input type="email" placeholder="Email">
+               </label>
+               <label>
+                   <input type="password" placeholder="Password">
+               </label>
+
+               <a href="#" >Forgotten your password?</a>
+               <button type="button" class="log-in">Log In</button>
+
+           </form>
+       </div>
+       <div class="toggle-container">
+           <div class ="toggle">
+               <div class="toggle-panel toggle-left">
+                   <h1>Welcome Back!</h1>
+                   <p>" Login to your account to book your tickets hassle-free and enjoy a seamless booking experience." </p>
+                   <button class="hidden" id="login">Log in</button>
+               </div>
+               <div class="toggle-panel toggle-right">
+                   <h1>Welcome!</h1>
+                   <p>" Sign up now to create your account and start booking your tickets easily, unlocking exclusive deals and offers along the way." </p>
+                   <button class="hidden" id="register">Sign up</button>
+               </div>
+           </div>
+       </div>
+   </div>
+
 </body>
 </html>

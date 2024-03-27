@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aeroride</title>
+
     <link rel ="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
@@ -10,7 +12,7 @@
 <div class="navbar">
     <div class="logo" >
         <img src="images/Aeroride.png" alt="Airline logo">
-        <div class="aeroride-text">Aeroride</div>
+        <div class="AeroRide-text">Aeroride</div>
     </div>
     <div class="menu">
         <a href="home.html">Home</a>
@@ -27,20 +29,20 @@
 <div class="container">
     <div class="inner-container">
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="trip" id="oneWay">
+        <label class="form-check-label" for="oneWay">
             One-Way
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
+        <input class="form-check-input" type="radio" name="trip" id="roundCity">
+        <label class="form-check-label" for="roundCity">
             Round-city
         </label>
     </div>
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
+        <input class="form-check-input" type="radio" name="trip" id="multiCity" >
+        <label class="form-check-label" for="multiCity">
             Multi-City
         </label>
     </div>
@@ -49,7 +51,7 @@
         <div class="inn">
         <div class="pqr">
             <span class="xyz">From</span>
-            <input type="text" id="fromInput" placeholder="Enter city or airport">
+            <label for="fromInput"></label><input type="text" id="fromInput" placeholder="Enter city or airport">
         </div>
        <span class="swap">
             <svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.11 6.739a.842.842 0 0 1-.842-.842V4.844a.21.21 0 0 0-.21-.211H4.543a1.264 1.264 0 1 1 0-2.527h8.515a.21.21 0 0 0 .21-.21V.841A.843.843 0 0 1 14.544.12l4.212 2.528a.842.842 0 0 1 0 1.444L14.544 6.62a.843.843 0 0 1-.433.12ZM.409 10.26l4.212-2.527a.842.842 0 0 1 1.276.723v1.053c0 .116.095.21.21.21h8.516a1.264 1.264 0 1 1 0 2.528H6.108a.21.21 0 0 0-.21.21v1.053a.842.842 0 0 1-1.277.722L.409 11.705a.842.842 0 0 1 0-1.445Z" fill="#2276E3"></path></svg>
@@ -59,14 +61,14 @@
         <div class="inn">
             <div class="pqr">
                 <span class="xyz">To</span>
-                <input type="text" id="toInput" placeholder="Enter city or airport">
+                <label for="toInput"></label><input type="text" id="toInput" placeholder="Enter city or airport">
             </div>
         </div>
 
         <div class="inn">
             <div class="pqr">
                 <span class="xyz">Departure</span>
-                <input type="date" name="" id="myDate">
+                <label for="myDate"></label><input type="date" name="" id="myDate">
             </div>
         </div>
 
@@ -75,69 +77,83 @@
                 <span class="xyz">Return</span>
                 <div class="ss" id="returnText" onclick="toggleReturnCalendar()">
                     <span id ="returnTextSpan">Click to add return flight for better discount</span>
-                    <input type="date" name="" id="reDate" class="calendar">
+                    <label for="reDate"></label><input type="date" name="" id="reDate" class="calendar">
                 </div>
             </div>
         </div>
 
-        <div class="inn">
-            <div class="pqr">
-                <span class="xyz">Travelers and class</span>
-                <div class="traveller-class-select">
-                    <select id="travellersSelect">
-                        <option value="adults">Adults</option>
-                        <option value="children">Children</option>
-                        <option value="infants">Infants</option>
-                    </select>
+        <div class="container">
+            <div class="section">
+                <span class="section-title">Travelers & Class</span>
+                <div class="traveller-count">
+                    <div class="label">Adults</div>
                     <div class="count-buttons">
-                        <button class="count-button" id="decreaseTravellers">-</button>
-                        <span id="travellersCount">1</span>
-                        <button class="count-button" id="increaseTravellers">+</button>
+                        <button class="count-button decrease-button">-</button>
+                        <span class="count">1</span>
+                        <button class="count-button increase-button">+</button>
                     </div>
                 </div>
+                <div class="traveller-count">
+                    <div class="label">Children</div>
+                    <div class="count-buttons">
+                        <button class="count-button decrease-button">-</button>
+                        <span class="count">0</span>
+                        <button class="count-button increase-button">+</button>
+                    </div>
+                </div>
+                <div class="traveller-count">
+                    <div class="label">Infants</div>
+                    <div class="count-buttons">
+                        <button class="count-button decrease-button">-</button>
+                        <span class="count">0</span>
+                        <button class="count-button increase-button">+</button>
+                    </div>
+                </div>
+            </div>
                 <div class="class-select">
-                    <select id="classSelect">
+                    <label for="classSelect"></label><select id="classSelect">
                         <option value="economy">Economy</option>
                         <option value="premium-economy">Premium Economy</option>
                         <option value="business">Business</option>
                         <option value="first">First Class</option>
                     </select>
                 </div>
-            </div>
+        </div>
+
+
     </div>
- </div>
 <div class="lastContainer">
  <div class="fare">
      <span class="selectFare">Select A Fare Types:</span>
  </div>
 
     <div class="form-check1">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
-        <label class="faS" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="fareType" id="regular-fare">
+        <label class="faS" for="regular-fare">
             Regular
         </label>
     </div>
     <div class="form-check1">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
-        <label class="faS" for="flexRadioDefault2">
+        <input class="form-check-input" type="radio" name="fareType" id="student-fare">
+        <label class="faS" for="student-fare">
             Student
         </label>
     </div>
     <div class="form-check1">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-        <label class="faS" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="fareType" id="seniorCitizen-fare">
+        <label class="faS" for="seniorCitizen-fare">
             Senior Citizen
         </label>
     </div>
     <div class="form-check1">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6" checked>
-        <label class="faS" for="flexRadioDefault2">
+        <input class="form-check-input" type="radio" name="fareType" id="doctorNurse-fare">
+        <label class="faS" for="doctorNurse-fare">
             Doctor & Nurses
         </label>
     </div>
     <div class="form-check1">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
-        <label class="faS" for="flexRadioDefault1">
+        <input class="form-check-input" type="radio" name="fareType" id="armedForce-fare">
+        <label class="faS" for="armedForce-fare">
             Armed Forces
         </label>
     </div>
