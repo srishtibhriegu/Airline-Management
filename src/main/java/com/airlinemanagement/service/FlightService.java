@@ -1,5 +1,4 @@
 package com.airlinemanagement.service;
 
-
-public class FlightCSVParser {
+public class FlightService {
 }

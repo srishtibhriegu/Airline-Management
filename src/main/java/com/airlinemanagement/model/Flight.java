@@ -1,4 +1,4 @@
-package com.airlinemanagement.api.model;
+package com.airlinemanagement.model;
 public class Flight {
 
     private String id;

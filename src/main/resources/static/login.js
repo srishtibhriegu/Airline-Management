@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById('container');
     const registerBtn = document.getElementById('register');
     const loginBtn = document.getElementById('login');
-    const signUpForm = document.querySelector('.sign-up form');
-    const loginForm = document.querySelector('.log-in form');
+    const signUpForm = document.querySelector('.form-container sign-up form');
+    const loginForm = document.querySelector('.form-container log-in form');
 
     registerBtn.addEventListener('click', () => {
         container.classList.add("active");
@@ -28,15 +28,44 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        if (!isValidPassword(password)) {
+                alert("Password must contain at least 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.");
+                return;
+            }
+
         if (password !== confirmPassword) {
             alert("Passwords do not match.");
             return;
         }
-
-        // Perform your signup/authentication logic here
-        // For example, you can make an AJAX request to a server endpoint
-        // to register the user and handle the response accordingly
     });
+    function isValidPassword(password) {
+        // Password must be at least 8 characters long
+        if (password.length < 8) {
+            return false;
+        }
+
+        // Password must contain at least one uppercase letter
+        if (!password.match(/[A-Z]/)) {
+            return false;
+        }
+
+        // Password must contain at least one lowercase letter
+        if (!password.match(/[a-z]/)) {
+            return false;
+        }
+
+        // Password must contain at least one digit
+        if (!password.match(/\d/)) {
+            return false;
+        }
+
+        // Password must contain at least one special character
+        if (!password.match(/[!@#$%^&*()-+=\[\]{}|<>/?~]/)) {
+            return false;
+        }
+
+        return true;
+    }
 
     loginForm.addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission behavior
@@ -51,8 +80,5 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Perform your login/authentication logic here
-        // For example, you can make an AJAX request to a server endpoint
-        // to authenticate the user and handle the response accordingly
     });
 });

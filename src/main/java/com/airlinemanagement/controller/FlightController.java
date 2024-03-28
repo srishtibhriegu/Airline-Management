@@ -1,6 +1,5 @@
-package com.airlinemanagement.api.controller;
-
-import com.airlinemanagement.api.model.Flight;
+package com.airlinemanagement.controller;
+import com.airlinemanagement.model.Flight;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+
+
 public class FlightController {
 
     @GetMapping("/flights")
@@ -40,4 +41,5 @@ public class FlightController {
         }
         return flights;
     }
+
 }
