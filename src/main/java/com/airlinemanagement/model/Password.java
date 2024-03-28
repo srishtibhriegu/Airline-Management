@@ -4,10 +4,10 @@ public class Password {
      private String value;
 
      public Password(Password value){
-         if(!isValidPassword(value)){
+         if(!isValidPassword(String.valueOf(value))){
              throw new IllegalArgumentException("Invalid password format");
          }
-        this.value=value;
+        this.value= String.valueOf(value);
      }
 
     public String getValue() {
