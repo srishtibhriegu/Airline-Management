@@ -16,8 +16,8 @@ This project is an airline management system developed using HTML, CSS, JavaScri
 ## Getting Started
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-repository.git`
-2. Navigate to the project directory: `cd your-repository`
+1. Clone the repository: `git clone https://github.com/srishtibhriegu/Airline-Management`
+2. Navigate to the project directory: `cd Airline-Management`
 3. Start the backend server: `./mvnw spring-boot:run`
 4. Open the frontend in a web browser: `open index.html`
 5. You may need to configure the database connection in the `application.properties` file.
